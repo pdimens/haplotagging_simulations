@@ -1,0 +1,14 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 0a796942-13f6-4f8f-882c-1b7ce519caa2
+  title: Inversion Simulations
+  description: The code and data exploration of the D. melanogaster haplotagging simulation experiment
+  authors: Pavel Dimens
+  github: pdimens/haplotagging_simulations
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

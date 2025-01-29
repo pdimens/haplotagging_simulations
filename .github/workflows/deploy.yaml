@@ -1,0 +1,38 @@
+name: Deploy JupyterBook
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      # Install JupyterBook and dependencies
+      - name: Install dependencies
+        run: |
+          pip install jupyter-book
+
+      # Build the JupyterBook
+      - name: Build JupyterBook
+        run: |
+          jb build . --path-output ./_build/html
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
