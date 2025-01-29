@@ -6,9 +6,10 @@ project:
   description: The code and data exploration of the D. melanogaster haplotagging simulation experiment
   authors: Pavel Dimens
   github: pdimens/haplotagging_simulations
+  banner: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png?1683074961
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
   # options:
   #   favicon: favicon.ico
-  #   logo: site_logo.png
+      logo: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png?1683074961
