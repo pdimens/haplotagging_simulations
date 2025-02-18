@@ -11,3 +11,7 @@ site:
   options:
     favicon: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
     logo: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
+    chapters:
+    - file: create_variants.ipynb
+    - file: create_reads.ipynb
+    - file: call_variants.ipynb
