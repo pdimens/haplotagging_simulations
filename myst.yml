@@ -12,6 +12,7 @@ project:
     - file: simulate_variants.ipynb
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
+    - file: check_called_inversions.ipynb
     
 site:
   template: book-theme
