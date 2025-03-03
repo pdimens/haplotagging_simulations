@@ -14,10 +14,18 @@ project:
     - file: call_variants.ipynb
     - file: check_called_inversions.ipynb
       children:
-        - file: check_called_inversions_small.ipynb
-        - file: check_called_inversions_medium.ipynb
-        - file: check_called_inversions_large.ipynb
-        - file: check_called_inversions_xl.ipynb
+        - title: 95% threshold
+          children:
+            - file: check_called_inversions_small.ipynb
+            - file: check_called_inversions_medium.ipynb
+            - file: check_called_inversions_large.ipynb
+            - file: check_called_inversions_xl.ipynb
+        - title: 90% threshold
+          children:
+            - file: check_called_inversions_small90.ipynb
+            - file: check_called_inversions_medium90.ipynb
+            - file: check_called_inversions_large90.ipynb
+            - file: check_called_inversions_xl90.ipynb
     - file: assess_called_inversions.ipynb
 site:
   template: book-theme
