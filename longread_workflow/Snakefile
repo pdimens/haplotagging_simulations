@@ -1,0 +1,141 @@
+haplotypes = ["../simulated.hap1.fasta", "../simulated.hap2.fasta"]
+genome = "geno/dmel.trunc.fasta"
+
+wildcard_constraints:
+    runtype = "[a-zA-Z0-9]+"
+
+rule all:
+    default_target: True
+    input:
+        expand("sv/{runtype}.bcf", runtype = ["pacbio", "ontshort", "ontlong"]),
+        expand("logs/{runtype}.lengthdist", runtype = ["pacbio","ontshort","ontlong"])
+    message:
+        "Complete!"
+
+modes = {
+    "pacbio" : "--difference-ratio 22:45:33 --length-mean 8000 --length-sd 1000   --length-min 2000 --length-max 20000",
+    "ontshort" : "--difference-ratio 39:24:36 --length-mean 3000 --length-sd 1000",
+    "ontlong" : "--difference-ratio 39:24:36 --length-mean 50000 --length-sd 20000"
+    }
+
+rule simluate_longreads:
+    input:
+        geno = "../simulated.hap{hap}.fasta",
+        model = "models/QSHMM-ONT-HQ.model"
+    output:
+        temp(expand("{{runtype}}.{{hap}}_{chunk}.fastq", chunk = ["%04d" % i for i in range(1,8)]))
+    log:
+        "logs/{runtype}.{hap}.log"
+    params:
+        config = lambda wc: modes[wc.get("runtype")],
+        depth = 25
+    message:
+        "Simulating reads: {wildcards.runtype}-{wildcards.hap}"
+    shell:
+        """
+        pbsim --strategy wgs --method qshmm --qshmm {input.model} \\
+            --genome {input.geno} --depth {params.depth} {params.config} \\
+            --prefix {wildcards.runtype}.{wildcards.hap} --seed 6969 \\
+            --id-prefix {wildcards.runtype}.{wildcards.hap} 2> {log} &&
+            rm {wildcards.runtype}.{wildcards.hap}*.maf {wildcards.runtype}.{wildcards.hap}*.ref         
+        """
+
+rule merge_fastq:
+    input:
+        expand("{{runtype}}.{hap}_{chunk}.fastq", hap = [1,2], chunk = ["%04d" % i for i in range(1,8)])
+    output:
+        "{runtype}.fq"
+    params:
+        lambda wc: modes[wc.get("runtype")]
+    message:
+        "Concatenating fastq: {wildcards.runtype}"
+    shell:
+        "cat {input} > {output}"
+
+rule compress:
+    input:
+        "{runtype}.fq"
+    output:
+        "{runtype}.fq.gz"
+    threads:
+        6
+    message:
+        "Compressing: {input}"
+    shell:
+        "pigz -p {threads} {input}"
+
+rule length_distribution:
+    input:
+        "{runtype}.fq.gz"
+    output:
+        "logs/{runtype}.lengthdist"
+    message:
+        "Creating read length histogram: {wildcards.runtype}"
+    shell:
+        """
+        awk 'NR%4 == 2 {{lengths[length($0)]++}} END {{for (l in lengths) {{print l, lengths[l]}}}}' <(zcat {input}) > {output}
+        """
+
+rule align:
+    input:
+        geno = genome,
+        reads = "{runtype}.fq.gz"
+    output:
+        temp("align/{runtype}.sam")
+    log:
+        "logs/{runtype}.align.log"
+    threads:
+        6
+    params:
+        lambda wc: "map-ont" if "ont" in wc.get("runtype") else "map-pb" 
+    message:
+        "Aligning: {wildcards.runtype} in {params} mode"
+    shell:
+        "minimap2 -t {threads} -ax {params} {input} > {output} 2> {log}"
+
+rule filter:
+    input:
+        "align/{runtype}.sam"
+    output:
+        bam = temp("align/{runtype}.filt.bam"),
+        bai = temp("align/{runtype}.filt.bam.bai")
+    log:
+        "logs/{runtype}.filter.log"
+    threads:
+        2
+    message:
+        "Filtering and sorting: {wildcards.runtype}"
+    shell:
+        """
+        samtools view -h -F 4 -q 20 {input} | 
+            samtools sort -O bam -l 0 -m 4G --write-index -o {output.bam}##idx##{output.bai} 2> {log}
+        """
+
+rule mark_duplicates:
+    input:
+        bam = "align/{runtype}.filt.bam",
+        bai = "align/{runtype}.filt.bam.bai"
+    output:
+        bam = "align/{runtype}.bam",
+        bai = "align/{runtype}.bam.bai"
+    log:
+        "logs/{runtype}.markduplicates.log"
+    threads:
+        4
+    message:
+        "Marking duplicates: {wildcards.runtype}"
+    shell:
+        "sambamba markdup -t {threads} -l 0 {input.bam} {output.bam} 2> {log}"
+
+rule call_variants:
+    input:
+        gen = genome,
+        reads = "align/{runtype}.bam"
+    output:
+        "sv/{runtype}.bcf"
+    params:
+        lambda wc: "ont" if "ont" in wc.get("runtype") else "pb" 
+    message:
+        "Calling variants: {wildcards.runtype} with mode {params}"
+    shell:
+        "delly lr -y {params} -o {output} -g {input}"

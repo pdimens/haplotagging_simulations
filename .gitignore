@@ -1,2 +1,8 @@
 # Jupyter Book (via myst) build outputs
 _build
+.pixi
+.environments
+Genome
+*.egg-info
+simulated_data
+dmel_genome

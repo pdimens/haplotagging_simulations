@@ -1,0 +1,25 @@
+[project]
+channels = ["conda-forge", "bioconda"]
+description = "Add a short description here"
+name = "harpy"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+apptainer = "*"
+bcftools = "1.20.*"
+click = "8.*"
+conda = ">24.7"
+lrez = "*"
+pysam = "*"
+python = "*"
+rich-click = "*"
+snakemake-minimal = ">7"
+samtools = "1.20.*"
+seqtk = "*"
+tabix = "*"
+
+[pypi-dependencies]
+harpy = { path = "." }
