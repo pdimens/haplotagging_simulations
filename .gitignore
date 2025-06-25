@@ -3,6 +3,7 @@
 
 # data
 simulated_data*/
+simulated_variants/
 
 # book stuff
 _build/
