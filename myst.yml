@@ -26,6 +26,6 @@ site:
   actions:
     - title: Therkildsen Lab
       url: https://www.therkildsenlab.org/
-  options:
-    favicon: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
-    logo: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
+#  options:
+#    favicon: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
+#    logo: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
