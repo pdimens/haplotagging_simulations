@@ -17,4 +17,5 @@ python = ">=3.12"
 
 [feature.harpy.dependencies]
 harpy = ">=2"
+truvari = ">=5.3.0,<6"
 

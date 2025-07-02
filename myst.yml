@@ -12,14 +12,12 @@ project:
     - file: simulate_variants.ipynb
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
-    - file: check_called_inversions.ipynb
+    - title: LEVIATHAN
       children:
-        - title: LEVIATHAN
-          children:
-            - file: check_called_inversions_small.ipynb
-            - file: check_called_inversions_medium.ipynb
-            - file: check_called_inversions_large.ipynb
-            - file: check_called_inversions_xl.ipynb
+        - file: check_called_inversions_small.ipynb
+        - file: check_called_inversions_medium.ipynb
+        - file: check_called_inversions_large.ipynb
+        - file: check_called_inversions_xl.ipynb
     - file: assess_called_inversions.ipynb
 site:
   template: book-theme
