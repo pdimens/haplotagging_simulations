@@ -18,6 +18,7 @@ project:
         - file: check_called_inversions_medium.ipynb
         - file: check_called_inversions_large.ipynb
         - file: check_called_inversions_xl.ipynb
+    - file: inversion_sanity_check.ipynb
 site:
   template: book-theme
   actions:
