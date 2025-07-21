@@ -1,0 +1,11 @@
+name: longreads
+channels:
+- bioconda
+- conda-forge
+dependencies:
+- bioconda::delly
+- bioconda::minimap2
+- bioconda::pbsim3
+- bioconda::sambamba
+- bioconda::samtools
+- conda-forge::pigz

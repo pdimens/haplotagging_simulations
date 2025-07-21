@@ -1,5 +1,13 @@
-haplotypes = ["../simulated.hap1.fasta", "../simulated.hap2.fasta"]
-genome = "geno/dmel.trunc.fasta"
+reference_genome = "../dmel_genome/dmel_2_3.fa.gz"
+samples = ["sample_%02d" % i for i in range(1,11)]
+sizes = ["small", "medium", "large", "xl"]
+depths = ["0.5", "5", "20"]
+platforms = ["pacbio", "ontshort", "ontlong"]
+modes = {
+    "pacbio" : "--difference-ratio 22:45:33 --length-mean 8000 --length-sd 1000 --length-min 2000 --length-max 20000",
+    "ontshort" : "--difference-ratio 39:24:36 --length-mean 3000 --length-sd 1000",
+    "ontlong" : "--difference-ratio 39:24:36 --length-mean 50000 --length-sd 20000"
+    }
 
 wildcard_constraints:
     runtype = "[a-zA-Z0-9]+"
@@ -7,58 +15,56 @@ wildcard_constraints:
 rule all:
     default_target: True
     input:
-        expand("sv/{runtype}.bcf", runtype = ["pacbio", "ontshort", "ontlong"]),
-        expand("logs/{runtype}.lengthdist", runtype = ["pacbio","ontshort","ontlong"])
+        expand("sv/{sample}.{runtype}.{size}.{depth}.bcf", sample = samples, runtype =platforms, size = sizes, depth = depths),
+        expand("logs/{sample}.{runtype}.{size}.{depth}.lengthdist", sample = samples, runtype =platforms, size = sizes, depth = depths)
     message:
         "Complete!"
 
-modes = {
-    "pacbio" : "--difference-ratio 22:45:33 --length-mean 8000 --length-sd 1000   --length-min 2000 --length-max 20000",
-    "ontshort" : "--difference-ratio 39:24:36 --length-mean 3000 --length-sd 1000",
-    "ontlong" : "--difference-ratio 39:24:36 --length-mean 50000 --length-sd 20000"
-    }
-
 rule simluate_longreads:
     input:
-        geno = "../simulated.hap{hap}.fasta",
+        geno = "../simulated_variants/inversions_snps_genomes/{size}/{sample}.snp_inv.hap{hap}.fasta.gz",
         model = "models/QSHMM-ONT-HQ.model"
     output:
-        temp(expand("{{runtype}}.{{hap}}_{chunk}.fastq", chunk = ["%04d" % i for i in range(1,8)]))
+        temp(expand("{{sample}}.{{runtype}}.{{size}}.{{depth}}.{{hap}}_{chunk}.fastq", chunk = ["%04d" % i for i in range(1,8)]))
     log:
-        "logs/{runtype}.{hap}.log"
+        "logs/{sample}.{runtype}.{size}.{depth}.{hap}.log"
     params:
         config = lambda wc: modes[wc.get("runtype")],
-        depth = 25
+        depth = lambda wc: "--depth " + wc.get("depth"),
+        prefix = ".".join([wc.get(i) for i in ["sample", "runtype", "size", "depth", "hap"]])
     message:
-        "Simulating reads: {wildcards.runtype}-{wildcards.hap}"
+        "Simulating reads: {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}.haplotype_{wildcards.hap}"
+    conda:
+        "envs/longreads.yaml"
     shell:
         """
-        pbsim --strategy wgs --method qshmm --qshmm {input.model} \\
-            --genome {input.geno} --depth {params.depth} {params.config} \\
-            --prefix {wildcards.runtype}.{wildcards.hap} --seed 6969 \\
-            --id-prefix {wildcards.runtype}.{wildcards.hap} 2> {log} &&
-            rm {wildcards.runtype}.{wildcards.hap}*.maf {wildcards.runtype}.{wildcards.hap}*.ref         
+        pbsim --strategy wgs --method qshmm --seed 6969 --qshmm {input.model} \\
+            --genome {input.geno} {params.depth} {params.config} \\
+            --prefix {params.prefix} --id-prefix {params.prefix} 2> {log} &&
+            rm {params.prefix}*.maf {params.prefix}*.ref         
         """
 
 rule merge_fastq:
     input:
-        expand("{{runtype}}.{hap}_{chunk}.fastq", hap = [1,2], chunk = ["%04d" % i for i in range(1,8)])
+        expand("{{sample}}.{{runtype}}.{{size}}.{{depth}}.{hap}_{chunk}.fastq", hap = [1,2], chunk = ["%04d" % i for i in range(1,8)])
     output:
-        "{runtype}.fq"
+        "{sample}.{runtype}.{size}.{depth}.fq"
     params:
         lambda wc: modes[wc.get("runtype")]
     message:
-        "Concatenating fastq: {wildcards.runtype}"
+        "Concatenating fastq: {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}"
     shell:
         "cat {input} > {output}"
 
 rule compress:
     input:
-        "{runtype}.fq"
+        "{sample}.{runtype}.{size}.{depth}.fq"
     output:
-        "{runtype}.fq.gz"
+        "{sample}.{runtype}.{size}.{depth}.fq.gz"
     threads:
         6
+    conda:
+        "envs/longreads.yaml"
     message:
         "Compressing: {input}"
     shell:
@@ -66,11 +72,11 @@ rule compress:
 
 rule length_distribution:
     input:
-        "{runtype}.fq.gz"
+        "{sample}.{runtype}.{size}.{depth}.fq.gz"
     output:
-        "logs/{runtype}.lengthdist"
+        "logs/{sample}.{runtype}.{size}.{depth}.lengthdist"
     message:
-        "Creating read length histogram: {wildcards.runtype}"
+        "Creating read length histogram: {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}"
     shell:
         """
         awk 'NR%4 == 2 {{lengths[length($0)]++}} END {{for (l in lengths) {{print l, lengths[l]}}}}' <(zcat {input}) > {output}
@@ -78,33 +84,37 @@ rule length_distribution:
 
 rule align:
     input:
-        geno = genome,
-        reads = "{runtype}.fq.gz"
+        geno = reference_genome,
+        reads = "{sample}.{runtype}.{size}.{depth}.fq.gz"
     output:
-        temp("align/{runtype}.sam")
+        temp("align/{sample}.{runtype}.{size}.{depth}.sam")
     log:
-        "logs/{runtype}.align.log"
+        "logs/{sample}.{runtype}.{size}.{depth}.align.log"
     threads:
         6
     params:
         lambda wc: "map-ont" if "ont" in wc.get("runtype") else "map-pb" 
     message:
-        "Aligning: {wildcards.runtype} in {params} mode"
+        "Aligning: {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth} in {params} mode"
+    conda:
+        "envs/longreads.yaml"
     shell:
         "minimap2 -t {threads} -ax {params} {input} > {output} 2> {log}"
 
 rule filter:
     input:
-        "align/{runtype}.sam"
+        "align/{sample}.{runtype}.{size}.{depth}.sam"
     output:
-        bam = temp("align/{runtype}.filt.bam"),
-        bai = temp("align/{runtype}.filt.bam.bai")
+        bam = temp("align/{sample}.{runtype}.{size}.{depth}.filt.bam"),
+        bai = temp("align/{sample}.{runtype}.{size}.{depth}.filt.bam.bai")
     log:
-        "logs/{runtype}.filter.log"
+        "logs/{sample}.{runtype}.{size}.{depth}.filter.log"
     threads:
         2
     message:
-        "Filtering and sorting: {wildcards.runtype}"
+        "Filtering and sorting:  {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}"
+    conda:
+        "envs/longreads.yaml"
     shell:
         """
         samtools view -h -F 4 -q 20 {input} | 
@@ -113,29 +123,33 @@ rule filter:
 
 rule mark_duplicates:
     input:
-        bam = "align/{runtype}.filt.bam",
-        bai = "align/{runtype}.filt.bam.bai"
+        bam = "align/{sample}.{runtype}.{size}.{depth}.filt.bam",
+        bai = "align/{sample}.{runtype}.{size}.{depth}.filt.bam.bai"
     output:
-        bam = "align/{runtype}.bam",
-        bai = "align/{runtype}.bam.bai"
+        bam = "align/{sample}.{runtype}.{size}.{depth}.bam",
+        bai = "align/{sample}.{runtype}.{size}.{depth}.bam.bai"
     log:
         "logs/{runtype}.markduplicates.log"
     threads:
         4
     message:
-        "Marking duplicates: {wildcards.runtype}"
+        "Marking duplicates:  {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}"
+    conda:
+        "envs/longreads.yaml"
     shell:
         "sambamba markdup -t {threads} -l 0 {input.bam} {output.bam} 2> {log}"
 
 rule call_variants:
     input:
         gen = genome,
-        reads = "align/{runtype}.bam"
+        reads = "align/{sample}.{runtype}.{size}.{depth}.bam"
     output:
-        "sv/{runtype}.bcf"
+        "sv/{sample}.{runtype}.{size}.{depth}.bcf"
     params:
         lambda wc: "ont" if "ont" in wc.get("runtype") else "pb" 
     message:
-        "Calling variants: {wildcards.runtype} with mode {params}"
+        "Calling variants: {wildcards.sample} {wildcards.runtype}.{wildcards.size}.{wildcards.depth} with mode {params}"
+    conda:
+        "envs/longreads.yaml"
     shell:
         "delly lr -y {params} -o {output} -g {input}"
