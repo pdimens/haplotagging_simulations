@@ -7,6 +7,7 @@ simulated_variants/
 longread_workflow/fasta
 longread_workflow/reads
 longread_workflow/sv
+longread_workflow/logs
 
 # book stuff
 _build/
