@@ -6,6 +6,7 @@ simulated_data*/
 simulated_variants/
 longread_workflow/fasta
 longread_workflow/reads
+longread_workflow/align
 longread_workflow/sv
 longread_workflow/logs
 
