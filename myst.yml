@@ -21,6 +21,7 @@ project:
         - file: check_called_inversions_xl.ipynb
     - file: inversion_sanity_check.ipynb
     - file: long_reads.ipynb
+    - file: longread_workflow/assess_longread_inversions.ipynb
 site:
   template: book-theme
   actions:

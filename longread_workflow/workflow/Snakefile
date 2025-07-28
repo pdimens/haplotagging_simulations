@@ -39,7 +39,7 @@ rule simluate_longreads:
         "logs/sample_{sample_id}.{runtype}.{size}.{depth}.{hap}.log"
     params:
         config = lambda wc: modes[wc.get("runtype")],
-        depth = lambda wc: "--depth " + wc.get("depth"),
+        depth = lambda wc: "0.5" if wc.get("depth") == "05" else wc.get("depth"),
         prefix = lambda wc: "reads/sample_" + ".".join([wc.get(i) for i in ["sample_id", "runtype", "size", "depth", "hap"]])
     message:
         "Simulating reads: sample_{wildcards.sample_id} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}.haplotype_{wildcards.hap}"
@@ -48,7 +48,7 @@ rule simluate_longreads:
     shell:
         """
         pbsim --strategy wgs --method qshmm --seed 6969 --qshmm {input.model} \\
-            --genome {input.geno} {params.depth} {params.config} \\
+            --genome {input.geno} --depth {params.depth} {params.config} \\
             --prefix {params.prefix} --id-prefix {params.prefix} 2> {log} &&
             rm {params.prefix}*.maf.gz {params.prefix}*.ref         
         """
