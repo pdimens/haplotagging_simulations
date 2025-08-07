@@ -15,8 +15,8 @@ project:
     - title: 04 Assess Linked-Read Performance
       children:
         - file: check_called_inversions_summary.ipynb
-        - file: check_called_inversions_small.ipynb
-        - file: check_called_inversions_medium.ipynb
+        - file: check_called_inversions_sm.ipynb
+        - file: check_called_inversions_med.ipynb
         - file: check_called_inversions_large.ipynb
         - file: check_called_inversions_xl.ipynb
     - file: inversion_sanity_check.ipynb
