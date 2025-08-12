@@ -12,7 +12,8 @@ project:
     - file: simulate_variants.ipynb
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
-    - title: 04 Assess Linked-Read Performance
+    - file: check_called_inversions_all.ipynb
+    - title: 04a Check called inversions (by size)
       children:
         - file: check_called_inversions_summary.ipynb
         - file: check_called_inversions_sm.ipynb
@@ -27,6 +28,6 @@ site:
   actions:
     - title: Therkildsen Lab
       url: https://www.therkildsenlab.org/
-#  options:
-#    favicon: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
-#    logo: https://www.therkildsenlab.org/uploads/1/4/5/5/145548022/published/new-logo-smaller.png
+  options:
+    favicon: misc/haplosims.png
+    logo: misc/haplosims.png
