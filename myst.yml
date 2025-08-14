@@ -29,5 +29,5 @@ site:
     - title: Therkildsen Lab
       url: https://www.therkildsenlab.org/
   options:
-    favicon: misc/haplosims.png
-    logo: misc/haplosims.png
+    favicon: misc/dmel.png
+    logo: misc/dmel.png
