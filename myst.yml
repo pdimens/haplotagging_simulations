@@ -15,7 +15,7 @@ project:
     - file: check_called_inversions_all.ipynb
     - title: 04a Check called inversions (by size)
       children:
-        - file: check_called_inversions_summary.ipynb
+        - file: compare_called_inversions.ipynb
         - file: check_called_inversions_sm.ipynb
         - file: check_called_inversions_med.ipynb
         - file: check_called_inversions_large.ipynb
