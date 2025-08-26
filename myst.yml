@@ -7,6 +7,7 @@ project:
   authors: 
     - name: Pavel Dimens
       orcid: 0000-0003-3823-0373
+      affiliations:
         - id: cornell
           institution: Cornell University
           department: Natural Resources and the Environment
