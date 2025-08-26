@@ -31,3 +31,10 @@ site:
   options:
     favicon: misc/dmel.png
     logo: misc/dmel.png
+
+html:
+  extra__path: ["misc/assets"]
+  extra_css:
+    - "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+  extra_js:
+    - "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"
