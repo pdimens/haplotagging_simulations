@@ -7,11 +7,6 @@ project:
   authors: 
     - name: Pavel Dimens
       orcid: 0000-0003-3823-0373
-      github: "@pdimens"
-      bluesky: "@pvdimens.bsky.social"
-      mastodon: "@pvdimens@ecoevo.social"
-      linkedin: https://www.linkedin.com/in/pavelvdimens/
-      affiliations:
         - id: cornell
           institution: Cornell University
           department: Natural Resources and the Environment
