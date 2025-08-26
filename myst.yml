@@ -15,7 +15,6 @@ project:
     - file: check_called_inversions_all.ipynb
     - title: 04a Check called inversions (by size)
       children:
-        - file: compare_called_inversions.ipynb
         - file: check_called_inversions_sm.ipynb
         - file: check_called_inversions_med.ipynb
         - file: check_called_inversions_large.ipynb
@@ -23,6 +22,7 @@ project:
     - file: inversion_sanity_check.ipynb
     - file: longread_workflow/simulate_long_reads.ipynb
     - file: longread_workflow/assess_longread_inversions.ipynb
+    - file: compare_called_inversions.ipynb
 site:
   template: book-theme
   actions:
