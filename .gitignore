@@ -9,6 +9,13 @@ longread_workflow/reads
 longread_workflow/align
 longread_workflow/sv
 longread_workflow/logs
+dmel.*
+*.fa
+*.sif
+RM*/
+RepBase*
+RepeatMasker
+
 
 # book stuff
 _build/
