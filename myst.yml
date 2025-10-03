@@ -25,12 +25,12 @@ project:
         - file: check_called_inversions_med.ipynb
         - file: check_called_inversions_large.ipynb
         - file: check_called_inversions_xl.ipynb
-    - file: inversion_sanity_check.ipynb
     - file: longread_workflow/simulate_long_reads.ipynb
     - file: longread_workflow/assess_longread_inversions.ipynb
     - file: compare_called_inversions.ipynb
-    - title: Inversions in repeat regions
+    - title: Inversion sanity checks
       children:
+      - file: inversion_N_check.ipynb
       - file: dmel_genome/repeat_modeling.ipynb
       - file: dmel_genome/inversion_repeats_check.ipynb
  # plugin:
