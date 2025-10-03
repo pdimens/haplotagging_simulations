@@ -30,7 +30,7 @@ project:
     - file: compare_called_inversions.ipynb
     - title: Inversion sanity checks
       children:
-      - file: inversion_N_check.ipynb
+      - file: dmel_genome/inversion_N_check.ipynb
       - file: dmel_genome/repeat_modeling.ipynb
       - file: dmel_genome/inversion_repeats_check.ipynb
  # plugin:
