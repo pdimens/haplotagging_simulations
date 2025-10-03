@@ -29,7 +29,10 @@ project:
     - file: longread_workflow/simulate_long_reads.ipynb
     - file: longread_workflow/assess_longread_inversions.ipynb
     - file: compare_called_inversions.ipynb
-    - file: dmel_genome/repeat_modeling.ipynb
+    - title: Inversions in repeat regions
+      children:
+      - file: dmel_genome/repeat_modeling.ipynb
+      - file: dmel_genome/inversion_repeats_check.ipynb
  # plugin:
  #   - "misc/assets/init-lightbox.js"
 site:
