@@ -33,6 +33,7 @@ project:
       - file: dmel_genome/inversion_N_check.ipynb
       - file: dmel_genome/repeat_modeling.ipynb
       - file: dmel_genome/inversion_repeats_check.ipynb
+      - file: check_if_leviathan_filtered.ipynb
  # plugin:
  #   - "misc/assets/init-lightbox.js"
 site:
