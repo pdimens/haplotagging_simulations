@@ -18,8 +18,9 @@ project:
     - file: simulate_variants.ipynb
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
-    - file: check_called_inversions_all.ipynb
-    - title: 04a Check called inversions (by size)
+    - file: assess_sv_leviathan/check_called_inversions_all.ipynb
+    - file: assess_sv_nairb/check_called_inversions_all.ipynb
+    - title: 04c Check called inversions (by size)
       children:
         - file: assess_sv_leviathan/check_called_inversions_sm.ipynb
         - file: assess_sv_naibr/check_called_inversions_sm.ipynb
