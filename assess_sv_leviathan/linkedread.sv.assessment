@@ -1,5 +1,5 @@
 contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_start,position_end,technology,method
-2L,1,1,0.5,11,small,TRUE,hom,false negative,3193196,3214221,linkedread,leviathan
+2L,1,1,0.5,11,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
 2L,1,1,2,11,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
 2L,1,1,5,11,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
 2L,1,1,10,11,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
@@ -54,7 +54,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,1,1,5,10,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
 2L,1,1,10,10,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
 2L,1,1,20,10,small,TRUE,hom,true positive,3193196,3214221,linkedread,leviathan
-2L,2,2,0.5,11,small,TRUE,hom,false negative,3940211,3944863,linkedread,leviathan
+2L,2,2,0.5,11,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,2,11,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,5,11,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,10,11,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
@@ -84,7 +84,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,2,2,5,5,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,10,5,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,20,5,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
-2L,2,2,0.5,6,small,TRUE,hom,false negative,3940211,3944863,linkedread,leviathan
+2L,2,2,0.5,6,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,2,6,small,TRUE,hom,false negative,3940211,3944863,linkedread,leviathan
 2L,2,2,5,6,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
 2L,2,2,10,6,small,TRUE,hom,true positive,3940211,3944863,linkedread,leviathan
@@ -164,7 +164,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,3,8,5,10,small,TRUE,hom,false negative,13024404,13026577,linkedread,leviathan
 2L,3,8,10,10,small,TRUE,hom,true positive,13024404,13026577,linkedread,leviathan
 2L,3,8,20,10,small,TRUE,hom,true positive,13024404,13026577,linkedread,leviathan
-2L,4,10,0.5,11,small,TRUE,hom,false negative,14845709,14861200,linkedread,leviathan
+2L,4,10,0.5,11,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
 2L,4,10,2,11,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
 2L,4,10,5,11,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
 2L,4,10,10,11,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
@@ -219,7 +219,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,4,10,5,10,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
 2L,4,10,10,10,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
 2L,4,10,20,10,small,TRUE,hom,true positive,14845709,14861200,linkedread,leviathan
-2L,5,14,0.5,11,small,TRUE,hom,false negative,20107901,20113695,linkedread,leviathan
+2L,5,14,0.5,11,small,TRUE,hom,true positive,20107901,20113695,linkedread,leviathan
 2L,5,14,2,11,small,TRUE,hom,true positive,20107901,20113695,linkedread,leviathan
 2L,5,14,5,11,small,TRUE,hom,true positive,20107901,20113695,linkedread,leviathan
 2L,5,14,10,11,small,TRUE,hom,true positive,20107901,20113695,linkedread,leviathan
@@ -329,7 +329,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,1,4,5,10,small,TRUE,het,false negative,4328632,4333509,linkedread,leviathan
 2R,1,4,10,10,small,TRUE,het,false negative,4328632,4333509,linkedread,leviathan
 2R,1,4,20,10,small,TRUE,het,false negative,4328632,4333509,linkedread,leviathan
-2R,2,5,0.5,11,small,TRUE,hom,false negative,9952840,9959287,linkedread,leviathan
+2R,2,5,0.5,11,small,TRUE,hom,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,2,11,small,TRUE,hom,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,5,11,small,TRUE,hom,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,10,11,small,TRUE,hom,true positive,9952840,9959287,linkedread,leviathan
@@ -354,7 +354,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,2,5,5,4,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,10,4,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,20,4,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
-2R,2,5,0.5,5,small,TRUE,het,false negative,9952840,9959287,linkedread,leviathan
+2R,2,5,0.5,5,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,2,5,small,TRUE,het,false negative,9952840,9959287,linkedread,leviathan
 2R,2,5,5,5,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,10,5,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
@@ -384,7 +384,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,2,5,5,10,small,TRUE,het,false negative,9952840,9959287,linkedread,leviathan
 2R,2,5,10,10,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
 2R,2,5,20,10,small,TRUE,het,true positive,9952840,9959287,linkedread,leviathan
-2R,3,6,0.5,11,small,TRUE,hom,false negative,10569437,10578078,linkedread,leviathan
+2R,3,6,0.5,11,small,TRUE,hom,true positive,10569437,10578078,linkedread,leviathan
 2R,3,6,2,11,small,TRUE,hom,true positive,10569437,10578078,linkedread,leviathan
 2R,3,6,5,11,small,TRUE,hom,true positive,10569437,10578078,linkedread,leviathan
 2R,3,6,10,11,small,TRUE,hom,true positive,10569437,10578078,linkedread,leviathan
@@ -494,7 +494,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,4,7,5,10,small,TRUE,het,true positive,11083686,11094907,linkedread,leviathan
 2R,4,7,10,10,small,TRUE,het,true positive,11083686,11094907,linkedread,leviathan
 2R,4,7,20,10,small,TRUE,het,true positive,11083686,11094907,linkedread,leviathan
-2R,5,15,0.5,11,small,TRUE,hom,false negative,21736723,21759355,linkedread,leviathan
+2R,5,15,0.5,11,small,TRUE,hom,true positive,21736723,21759355,linkedread,leviathan
 2R,5,15,2,11,small,TRUE,hom,true positive,21736723,21759355,linkedread,leviathan
 2R,5,15,5,11,small,TRUE,hom,true positive,21736723,21759355,linkedread,leviathan
 2R,5,15,10,11,small,TRUE,hom,true positive,21736723,21759355,linkedread,leviathan
@@ -879,7 +879,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,1,12,5,10,small,FALSE,NA,true negative,20006864,20010483,linkedread,leviathan
 3R,1,12,10,10,small,FALSE,NA,true negative,20006864,20010483,linkedread,leviathan
 3R,1,12,20,10,small,FALSE,NA,true negative,20006864,20010483,linkedread,leviathan
-3R,2,13,0.5,11,small,TRUE,hom,false negative,20081037,20093594,linkedread,leviathan
+3R,2,13,0.5,11,small,TRUE,hom,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,2,11,small,TRUE,hom,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,5,11,small,TRUE,hom,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,10,11,small,TRUE,hom,true positive,20081037,20093594,linkedread,leviathan
@@ -929,12 +929,12 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,2,13,5,9,small,TRUE,het,false negative,20081037,20093594,linkedread,leviathan
 3R,2,13,10,9,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,20,9,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
-3R,2,13,0.5,10,small,TRUE,het,false negative,20081037,20093594,linkedread,leviathan
+3R,2,13,0.5,10,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,2,10,small,TRUE,het,false negative,20081037,20093594,linkedread,leviathan
 3R,2,13,5,10,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,10,10,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
 3R,2,13,20,10,small,TRUE,het,true positive,20081037,20093594,linkedread,leviathan
-3R,3,16,0.5,11,small,TRUE,hom,false negative,22829883,22851519,linkedread,leviathan
+3R,3,16,0.5,11,small,TRUE,hom,true positive,22829883,22851519,linkedread,leviathan
 3R,3,16,2,11,small,TRUE,hom,true positive,22829883,22851519,linkedread,leviathan
 3R,3,16,5,11,small,TRUE,hom,true positive,22829883,22851519,linkedread,leviathan
 3R,3,16,10,11,small,TRUE,hom,true positive,22829883,22851519,linkedread,leviathan
@@ -989,7 +989,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,3,16,5,10,small,FALSE,NA,true negative,22829883,22851519,linkedread,leviathan
 3R,3,16,10,10,small,FALSE,NA,true negative,22829883,22851519,linkedread,leviathan
 3R,3,16,20,10,small,FALSE,NA,true negative,22829883,22851519,linkedread,leviathan
-3R,4,18,0.5,11,small,TRUE,hom,false negative,24971985,24984761,linkedread,leviathan
+3R,4,18,0.5,11,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
 3R,4,18,2,11,small,TRUE,hom,false negative,24971985,24984761,linkedread,leviathan
 3R,4,18,5,11,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
 3R,4,18,10,11,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
@@ -1044,7 +1044,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,4,18,5,10,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
 3R,4,18,10,10,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
 3R,4,18,20,10,small,TRUE,hom,true positive,24971985,24984761,linkedread,leviathan
-3R,5,19,0.5,11,small,TRUE,hom,false negative,25379867,25402914,linkedread,leviathan
+3R,5,19,0.5,11,small,TRUE,hom,true positive,25379867,25402914,linkedread,leviathan
 3R,5,19,2,11,small,TRUE,hom,true positive,25379867,25402914,linkedread,leviathan
 3R,5,19,5,11,small,TRUE,hom,true positive,25379867,25402914,linkedread,leviathan
 3R,5,19,10,11,small,TRUE,hom,true positive,25379867,25402914,linkedread,leviathan
@@ -1209,7 +1209,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,2,4,5,10,medium,TRUE,hom,false negative,6436329,6636405,linkedread,leviathan
 2L,2,4,10,10,medium,TRUE,hom,false negative,6436329,6636405,linkedread,leviathan
 2L,2,4,20,10,medium,TRUE,hom,false negative,6436329,6636405,linkedread,leviathan
-2L,3,9,0.5,11,medium,TRUE,hom,false negative,17056243,17424245,linkedread,leviathan
+2L,3,9,0.5,11,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
 2L,3,9,2,11,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
 2L,3,9,5,11,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
 2L,3,9,10,11,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
@@ -1264,7 +1264,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,3,9,5,10,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
 2L,3,9,10,10,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
 2L,3,9,20,10,medium,TRUE,hom,true positive,17056243,17424245,linkedread,leviathan
-2L,4,12,0.5,11,medium,TRUE,hom,false negative,20404853,20474308,linkedread,leviathan
+2L,4,12,0.5,11,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,2,11,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,5,11,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,10,11,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
@@ -1279,7 +1279,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,4,12,5,2,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,10,2,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,20,2,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
-2L,4,12,0.5,3,medium,TRUE,hom,false negative,20404853,20474308,linkedread,leviathan
+2L,4,12,0.5,3,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,2,3,medium,TRUE,hom,false negative,20404853,20474308,linkedread,leviathan
 2L,4,12,5,3,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,10,3,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
@@ -1314,7 +1314,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,4,12,5,9,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,10,9,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,20,9,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
-2L,4,12,0.5,10,medium,TRUE,hom,false negative,20404853,20474308,linkedread,leviathan
+2L,4,12,0.5,10,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,2,10,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,5,10,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
 2L,4,12,10,10,medium,TRUE,hom,true positive,20404853,20474308,linkedread,leviathan
@@ -1484,7 +1484,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,3,10,5,10,medium,TRUE,het,false negative,17910285,18000549,linkedread,leviathan
 2R,3,10,10,10,medium,TRUE,het,false negative,17910285,18000549,linkedread,leviathan
 2R,3,10,20,10,medium,TRUE,het,true positive,17910285,18000549,linkedread,leviathan
-2R,4,11,0.5,11,medium,TRUE,hom,false negative,18236490,18696638,linkedread,leviathan
+2R,4,11,0.5,11,medium,TRUE,hom,true positive,18236490,18696638,linkedread,leviathan
 2R,4,11,2,11,medium,TRUE,hom,true positive,18236490,18696638,linkedread,leviathan
 2R,4,11,5,11,medium,TRUE,hom,true positive,18236490,18696638,linkedread,leviathan
 2R,4,11,10,11,medium,TRUE,hom,true positive,18236490,18696638,linkedread,leviathan
@@ -1814,7 +1814,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,1,8,5,10,medium,FALSE,NA,true negative,16760480,16905871,linkedread,leviathan
 3R,1,8,10,10,medium,FALSE,NA,true negative,16760480,16905871,linkedread,leviathan
 3R,1,8,20,10,medium,FALSE,NA,true negative,16760480,16905871,linkedread,leviathan
-3R,2,14,0.5,11,medium,TRUE,hom,false negative,22722816,22831351,linkedread,leviathan
+3R,2,14,0.5,11,medium,TRUE,hom,true positive,22722816,22831351,linkedread,leviathan
 3R,2,14,2,11,medium,TRUE,hom,true positive,22722816,22831351,linkedread,leviathan
 3R,2,14,5,11,medium,TRUE,hom,true positive,22722816,22831351,linkedread,leviathan
 3R,2,14,10,11,medium,TRUE,hom,true positive,22722816,22831351,linkedread,leviathan
@@ -1869,7 +1869,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,2,14,5,10,medium,TRUE,het,true positive,22722816,22831351,linkedread,leviathan
 3R,2,14,10,10,medium,TRUE,het,true positive,22722816,22831351,linkedread,leviathan
 3R,2,14,20,10,medium,TRUE,het,true positive,22722816,22831351,linkedread,leviathan
-3R,3,15,0.5,11,medium,TRUE,hom,false negative,24237377,24380766,linkedread,leviathan
+3R,3,15,0.5,11,medium,TRUE,hom,true positive,24237377,24380766,linkedread,leviathan
 3R,3,15,2,11,medium,TRUE,hom,true positive,24237377,24380766,linkedread,leviathan
 3R,3,15,5,11,medium,TRUE,hom,true positive,24237377,24380766,linkedread,leviathan
 3R,3,15,10,11,medium,TRUE,hom,true positive,24237377,24380766,linkedread,leviathan
@@ -2584,7 +2584,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3L,1,3,5,10,xl,FALSE,NA,true negative,5332918,22935558,linkedread,leviathan
 3L,1,3,10,10,xl,FALSE,NA,true negative,5332918,22935558,linkedread,leviathan
 3L,1,3,20,10,xl,FALSE,NA,true negative,5332918,22935558,linkedread,leviathan
-3R,1,2,0.5,11,xl,TRUE,hom,false negative,5316416,31441385,linkedread,leviathan
+3R,1,2,0.5,11,xl,TRUE,hom,true positive,5316416,31441385,linkedread,leviathan
 3R,1,2,2,11,xl,TRUE,hom,true positive,5316416,31441385,linkedread,leviathan
 3R,1,2,5,11,xl,TRUE,hom,true positive,5316416,31441385,linkedread,leviathan
 3R,1,2,10,11,xl,TRUE,hom,true positive,5316416,31441385,linkedread,leviathan

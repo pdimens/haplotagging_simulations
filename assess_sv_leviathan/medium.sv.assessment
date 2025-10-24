@@ -109,7 +109,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,2,4,5,10,medium,TRUE,hom,false negative,6436329,6636405
 2L,2,4,10,10,medium,TRUE,hom,false negative,6436329,6636405
 2L,2,4,20,10,medium,TRUE,hom,false negative,6436329,6636405
-2L,3,9,0.5,11,medium,TRUE,hom,false negative,17056243,17424245
+2L,3,9,0.5,11,medium,TRUE,hom,true positive,17056243,17424245
 2L,3,9,2,11,medium,TRUE,hom,true positive,17056243,17424245
 2L,3,9,5,11,medium,TRUE,hom,true positive,17056243,17424245
 2L,3,9,10,11,medium,TRUE,hom,true positive,17056243,17424245
@@ -164,7 +164,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,3,9,5,10,medium,TRUE,hom,true positive,17056243,17424245
 2L,3,9,10,10,medium,TRUE,hom,true positive,17056243,17424245
 2L,3,9,20,10,medium,TRUE,hom,true positive,17056243,17424245
-2L,4,12,0.5,11,medium,TRUE,hom,false negative,20404853,20474308
+2L,4,12,0.5,11,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,2,11,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,5,11,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,10,11,medium,TRUE,hom,true positive,20404853,20474308
@@ -179,7 +179,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,4,12,5,2,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,10,2,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,20,2,medium,TRUE,hom,true positive,20404853,20474308
-2L,4,12,0.5,3,medium,TRUE,hom,false negative,20404853,20474308
+2L,4,12,0.5,3,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,2,3,medium,TRUE,hom,false negative,20404853,20474308
 2L,4,12,5,3,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,10,3,medium,TRUE,hom,true positive,20404853,20474308
@@ -214,7 +214,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2L,4,12,5,9,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,10,9,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,20,9,medium,TRUE,hom,true positive,20404853,20474308
-2L,4,12,0.5,10,medium,TRUE,hom,false negative,20404853,20474308
+2L,4,12,0.5,10,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,2,10,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,5,10,medium,TRUE,hom,true positive,20404853,20474308
 2L,4,12,10,10,medium,TRUE,hom,true positive,20404853,20474308
@@ -384,7 +384,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 2R,3,10,5,10,medium,TRUE,het,false negative,17910285,18000549
 2R,3,10,10,10,medium,TRUE,het,false negative,17910285,18000549
 2R,3,10,20,10,medium,TRUE,het,true positive,17910285,18000549
-2R,4,11,0.5,11,medium,TRUE,hom,false negative,18236490,18696638
+2R,4,11,0.5,11,medium,TRUE,hom,true positive,18236490,18696638
 2R,4,11,2,11,medium,TRUE,hom,true positive,18236490,18696638
 2R,4,11,5,11,medium,TRUE,hom,true positive,18236490,18696638
 2R,4,11,10,11,medium,TRUE,hom,true positive,18236490,18696638
@@ -714,7 +714,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,1,8,5,10,medium,FALSE,NA,true negative,16760480,16905871
 3R,1,8,10,10,medium,FALSE,NA,true negative,16760480,16905871
 3R,1,8,20,10,medium,FALSE,NA,true negative,16760480,16905871
-3R,2,14,0.5,11,medium,TRUE,hom,false negative,22722816,22831351
+3R,2,14,0.5,11,medium,TRUE,hom,true positive,22722816,22831351
 3R,2,14,2,11,medium,TRUE,hom,true positive,22722816,22831351
 3R,2,14,5,11,medium,TRUE,hom,true positive,22722816,22831351
 3R,2,14,10,11,medium,TRUE,hom,true positive,22722816,22831351
@@ -769,7 +769,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,2,14,5,10,medium,TRUE,het,true positive,22722816,22831351
 3R,2,14,10,10,medium,TRUE,het,true positive,22722816,22831351
 3R,2,14,20,10,medium,TRUE,het,true positive,22722816,22831351
-3R,3,15,0.5,11,medium,TRUE,hom,false negative,24237377,24380766
+3R,3,15,0.5,11,medium,TRUE,hom,true positive,24237377,24380766
 3R,3,15,2,11,medium,TRUE,hom,true positive,24237377,24380766
 3R,3,15,5,11,medium,TRUE,hom,true positive,24237377,24380766
 3R,3,15,10,11,medium,TRUE,hom,true positive,24237377,24380766
