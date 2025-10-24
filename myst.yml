@@ -19,7 +19,7 @@ project:
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
     - file: assess_sv_leviathan/check_called_inversions_all.ipynb
-    - file: assess_sv_nairb/check_called_inversions_all.ipynb
+    - file: assess_sv_naibr/check_called_inversions_all.ipynb
     - title: 04c Check called inversions (by size)
       children:
         - file: assess_sv_leviathan/check_called_inversions_sm.ipynb
@@ -39,8 +39,6 @@ project:
       - file: dmel_genome/repeat_modeling.ipynb
       - file: dmel_genome/inversion_repeats_check.ipynb
       - file: check_if_leviathan_filtered.ipynb
- # plugin:
- #   - "misc/assets/init-lightbox.js"
 site:
   template: book-theme
   actions:
