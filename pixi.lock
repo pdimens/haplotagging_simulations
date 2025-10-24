@@ -74,7 +74,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/gitpython-3.1.45-pyhff2d567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gsl-2.7-he838d99_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.3.0-pyhcf101f3_0.conda
-      - conda: https://conda.anaconda.org/bioconda/noarch/harpy-3.0.1-pyhdfd78af_0.conda
+      - conda: https://conda.anaconda.org/bioconda/noarch/harpy-3.1-pyhdfd78af_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hpack-4.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/bioconda/linux-64/htslib-1.22.1-h566b1c6_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/humanfriendly-10.0-pyh707e725_8.conda
@@ -157,7 +157,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/requests-2.32.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/reretry-0.11.8-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/rich-14.1.0-pyhe01879c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/rich-click-1.8.9-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/rich-click-1.9.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/rpds-py-0.27.1-py313h843e2db_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruamel.yaml-0.18.15-py313h07c4f96_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruamel.yaml.clib-0.2.12-py313h07c4f96_1.conda
@@ -1281,9 +1281,9 @@ packages:
   license_family: MIT
   size: 1730226
   timestamp: 1747091044218
-- conda: https://conda.anaconda.org/bioconda/noarch/harpy-3.0.1-pyhdfd78af_0.conda
-  sha256: 600cebb5c11bd8495bee526e7a2dfd1e7b0ae473bf3336ff9d66338c7b717f30
-  md5: 87fb2103d942af20a503ce6b83ed94a8
+- conda: https://conda.anaconda.org/bioconda/noarch/harpy-3.1-pyhdfd78af_0.conda
+  sha256: 6ac3d61992182321d7e5094a0bc47d5efe511307f3f5b40d256bbf489e1a6a27
+  md5: 4610f6c609260d36a705fff22bf0407c
   depends:
   - bcftools >=1.22
   - conda >24.7
@@ -1296,8 +1296,8 @@ packages:
   - snakemake-minimal >=9.0
   license: GPL-3.0-or-later
   license_family: GPL3
-  size: 164113
-  timestamp: 1756495509910
+  size: 155525
+  timestamp: 1760639240731
 - conda: https://conda.anaconda.org/conda-forge/noarch/hpack-4.1.0-pyhd8ed1ab_0.conda
   sha256: 6ad78a180576c706aabeb5b4c8ceb97c0cb25f1e112d76495bff23e3779948ba
   md5: 0a802cb9888dd14eeefc611f05c40b6e
@@ -5040,17 +5040,17 @@ packages:
   license_family: MIT
   size: 201098
   timestamp: 1753436991345
-- conda: https://conda.anaconda.org/conda-forge/noarch/rich-click-1.8.9-pyhd8ed1ab_0.conda
-  sha256: c9f67d8fc3b1518feee6264872a583f92464616d47bc8b1bc3df39b6ed174036
-  md5: d8d3e4c019f679b5af7a012f1bfc89a9
+- conda: https://conda.anaconda.org/conda-forge/noarch/rich-click-1.9.3-pyhd8ed1ab_0.conda
+  sha256: 9ad6c371e18d1c77f856f6f9c9d7a11e77454a2896a870017e1df9c3137f6efc
+  md5: 15c5c557d4e44660cc20c1370a691e84
   depends:
   - click >=7,<9
-  - python >=3.9
+  - python >=3.10
   - rich >=10.7
   license: MIT
   license_family: MIT
-  size: 34928
-  timestamp: 1747725548030
+  size: 59186
+  timestamp: 1760036817441
 - conda: https://conda.anaconda.org/conda-forge/linux-64/rpds-py-0.27.1-py313h843e2db_1.conda
   sha256: a976e90dbd229f7dcd357b0f9a5b637bf85243f3a3e844c1e266472cae53e359
   md5: 06c117e49934b564ef9ff6e61f279301
