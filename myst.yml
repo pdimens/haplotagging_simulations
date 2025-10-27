@@ -18,7 +18,7 @@ project:
     - file: simulate_variants.ipynb
     - file: simulate_reads.ipynb
     - file: call_variants.ipynb
-    - title: 04 Check called inversions
+    - title: 05 Check called inversions
       children:
         - file: assess_sv_leviathan/check_called_inversions_all.ipynb
         - file: assess_sv_naibr/check_called_inversions_all.ipynb
@@ -27,22 +27,22 @@ project:
           children:
           - file: assess_sv_leviathan/check_called_inversions_small.ipynb
           - file: assess_sv_naibr/check_called_inversions_small.ipynb
-          - file: assess_sv_delly/check_called_inversions_small.ipynb
+          - file: assess_sv_delly_short/check_called_inversions_small.ipynb
         - title: Medium inversions
           children:
           - file: assess_sv_leviathan/check_called_inversions_medium.ipynb
           - file: assess_sv_naibr/check_called_inversions_medium.ipynb
-          - file: assess_sv_delly/check_called_inversions_medium.ipynb
+          - file: assess_sv_delly_short/check_called_inversions_medium.ipynb
         - title: Large inversions
           children:
           - file: assess_sv_leviathan/check_called_inversions_large.ipynb
           - file: assess_sv_naibr/check_called_inversions_large.ipynb
-          - file: assess_sv_delly/check_called_inversions_large.ipynb
+          - file: assess_sv_delly_short/check_called_inversions_large.ipynb
         - title: XL inversions
           children:
           - file: assess_sv_leviathan/check_called_inversions_xl.ipynb
           - file: assess_sv_naibr/check_called_inversions_xl.ipynb
-          - file: assess_sv_delly/check_called_inversions_xl.ipynb
+          - file: assess_sv_delly_short/check_called_inversions_xl.ipynb
     - file: longread_workflow/simulate_long_reads.ipynb
     - file: longread_workflow/assess_longread_inversions.ipynb
     - file: compare_called_inversions.ipynb
