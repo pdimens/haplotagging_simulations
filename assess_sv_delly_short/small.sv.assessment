@@ -914,7 +914,7 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,assessment,position_sta
 3R,4,18,5,3,small,TRUE,hom,true positive,24971985,24984761
 3R,4,18,10,3,small,TRUE,hom,true positive,24971985,24984761
 3R,4,18,20,3,small,TRUE,hom,true positive,24971985,24984761
-3R,4,18,0.5,4,small,FALSE,NA,true negative,24971985,24984761
+3R,4,18,0.5,4,small,FALSE,NA,false positive,24971985,24984761
 3R,4,18,2,4,small,FALSE,NA,false positive,24971985,24984761
 3R,4,18,5,4,small,FALSE,NA,false positive,24971985,24984761
 3R,4,18,10,4,small,FALSE,NA,false positive,24971985,24984761
