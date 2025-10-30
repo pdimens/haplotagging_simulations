@@ -3,6 +3,7 @@
 
 # data
 simulated_data*/
+simulated_genomes/
 simulated_variants/
 longread_workflow/fasta
 longread_workflow/reads
