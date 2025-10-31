@@ -6,6 +6,7 @@ dependencies:
 - bioconda::delly
 - bioconda::minimap2
 - bioconda::pbsim3
+- conda-forge::pigz
 - bioconda::sambamba
 - bioconda::samtools
-- conda-forge::pigz
+- bioconda::sniffles

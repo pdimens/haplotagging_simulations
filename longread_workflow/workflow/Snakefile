@@ -18,7 +18,7 @@ wildcard_constraints:
 rule all:
     default_target: True
     input:
-        expand("sv/{sample}.{runtype}.{size}.{depth}.bcf", sample = samples, runtype =platforms, size = sizes, depth = depths),
+        expand("sv/{sample}.{runtype}.{size}.{depth}.vcf.gz", sample = samples, runtype =platforms, size = sizes, depth = depths),
         expand("logs/{sample}.{runtype}.{size}.{depth}.lengthdist", sample = samples, runtype =platforms, size = sizes, depth = depths)
     message:
         "Complete!"
@@ -136,15 +136,12 @@ rule mark_duplicates:
 
 rule call_variants:
     input:
-        gen = reference_genome,
         reads = "align/sample_{sample_id}.{runtype}.{size}.{depth}.bam"
     output:
-        "sv/sample_{sample_id}.{runtype}.{size}.{depth}.bcf"
-    params:
-        lambda wc: "ont" if "ont" in wc.get("runtype") else "pb" 
+        "sv/sample_{sample_id}.{runtype}.{size}.{depth}.vcf.gz"
     message:
-        "Calling variants: sample_{wildcards.sample_id} {wildcards.runtype}.{wildcards.size}.{wildcards.depth} with mode {params}"
+        "Calling variants: sample_{wildcards.sample_id} {wildcards.runtype}.{wildcards.size}.{wildcards.depth}"
     conda:
         "envs/longreads.yaml"
     shell:
-        "delly lr -y {params} -o {output} -g {input}"
+        "sniffles -i {input} -v {output}"
