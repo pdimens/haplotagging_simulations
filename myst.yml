@@ -21,7 +21,7 @@ project:
     - file: call_variants.ipynb
     - title: 04 Check called inversions
       children:
-        - file: assess_sv_leviathan/check_called_inversions_all.ipynb
+        - file: assess_sv_leviathan/visor/check_called_inversions_all.ipynb
         - file: assess_sv_naibr/check_called_inversions_all.ipynb
         - file: assess_sv_delly_short/check_called_inversions_all.ipynb
         - file: longread_workflow/assess_longread_inversions.ipynb
