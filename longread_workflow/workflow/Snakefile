@@ -24,7 +24,7 @@ rule all:
         "Complete!"
 
 rule decompress_fasta:
-    input: "../simulated_variants/inversions_snps_genomes/{size}/sample_{sample_id}.snp_inv.hap{hap}.fasta.gz"
+    input: "../simulated_genomes/{size}/sample_{sample_id}.{size}.hap{hap}.fasta.gz"
     output: temp("fasta/{size}.sample_{sample_id}.snp_inv.hap{hap}.fa")
     message: "Temporarily decompressing {input}"
     shell: "gzip -dc {input} > {output}"
