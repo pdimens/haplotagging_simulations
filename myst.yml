@@ -22,29 +22,29 @@ project:
     - title: 04 Check called inversions
       children:
         - file: assess_sv_leviathan/visor/check_called_inversions_all.ipynb
-        - file: assess_sv_naibr/check_called_inversions_all.ipynb
-        - file: assess_sv_delly_short/check_called_inversions_all.ipynb
+        - file: assess_sv_naibr/visor/check_called_inversions_all.ipynb
+        - file: assess_sv_delly/check_called_inversions_all.ipynb
         - file: longread_workflow/assess_longread_inversions.ipynb
         - file: assess_sv_leviathan/visor/setup_table.ipynb
         - title: Small inversions
           children:
           - file: assess_sv_leviathan/visor/check_called_inversions_small.ipynb
-          - file: assess_sv_naibr/check_called_inversions_small.ipynb
+          - file: assess_sv_naibr/visor/check_called_inversions_small.ipynb
           - file: assess_sv_delly_short/check_called_inversions_small.ipynb
         - title: Medium inversions
           children:
           - file: assess_sv_leviathan/visor/check_called_inversions_medium.ipynb
-          - file: assess_sv_naibr/check_called_inversions_medium.ipynb
+          - file: assess_sv_naibr/visor/check_called_inversions_medium.ipynb
           - file: assess_sv_delly_short/check_called_inversions_medium.ipynb
         - title: Large inversions
           children:
           - file: assess_sv_leviathan/visor/check_called_inversions_large.ipynb
-          - file: assess_sv_naibr/check_called_inversions_large.ipynb
+          - file: assess_sv_naibr/visor/check_called_inversions_large.ipynb
           - file: assess_sv_delly_short/check_called_inversions_large.ipynb
         - title: XL inversions
           children:
           - file: assess_sv_leviathan/visor/check_called_inversions_xl.ipynb
-          - file: assess_sv_naibr/check_called_inversions_xl.ipynb
+          - file: assess_sv_naibr/visor/check_called_inversions_xl.ipynb
           - file: assess_sv_delly_short/check_called_inversions_xl.ipynb
     - file: compare_called_inversions.ipynb
     - title: Inversion sanity checks
@@ -52,7 +52,6 @@ project:
       - file: dmel_genome/inversion_N_check.ipynb
       - file: dmel_genome/repeat_modeling.ipynb
       - file: dmel_genome/inversion_repeats_check.ipynb
-      - file: check_if_leviathan_filtered.ipynb
 site:
   template: book-theme
   actions:
