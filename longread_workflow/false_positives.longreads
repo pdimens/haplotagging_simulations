@@ -1,0 +1,17 @@
+contig position_start position_end sample depth size method
+3R 24971984 24984869 1 5 small ontlong
+2R 1439996 4186656 1 10 large ontlong
+2L 20107900 22187293 3 5 small pacbio
+2L 20107900 22187293 3 10 small pacbio
+2L 20107900 22187293 3 20 small pacbio
+2R 1439996 4186656 3 10 large ontlong
+3R 20080880 20093594 4 5 small ontlong
+2L 20107900 22187295 6 10 small pacbio
+2R 1439863 4186470 6 2 large ontlong
+2R 1439863 4186465 6 5 large ontlong
+2R 1439996 4186656 6 20 large ontlong
+3R 20080901 20093594 8 10 small ontlong
+2R 1439996 4186656 8 20 large ontlong
+3R 20080888 20093621 10 2 small ontlong
+3R 20080880 20093594 10 10 small ontlong
+3R 20080901 20093594 10 20 small ontlong

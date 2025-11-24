@@ -49,11 +49,6 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,position_start,position
 2L,1,1,5,10,xl,TRUE,homozygous,961650,21551190,true positive
 2L,1,1,10,10,xl,TRUE,homozygous,961650,21551190,true positive
 2L,1,1,20,10,xl,TRUE,homozygous,961650,21551190,true positive
-2L,1,1,0.5,11,xl,TRUE,homozygous,961650,21551190,false negative
-2L,1,1,2,11,xl,TRUE,homozygous,961650,21551190,false negative
-2L,1,1,5,11,xl,TRUE,homozygous,961650,21551190,false negative
-2L,1,1,10,11,xl,TRUE,homozygous,961650,21551190,false negative
-2L,1,1,20,11,xl,TRUE,homozygous,961650,21551190,false negative
 2R,1,4,0.5,1,xl,TRUE,heterozygous,6686007,24798525,false negative
 2R,1,4,2,1,xl,TRUE,heterozygous,6686007,24798525,true positive
 2R,1,4,5,1,xl,TRUE,heterozygous,6686007,24798525,true positive
@@ -104,11 +99,6 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,position_start,position
 2R,1,4,5,10,xl,TRUE,heterozygous,6686007,24798525,true positive
 2R,1,4,10,10,xl,TRUE,heterozygous,6686007,24798525,true positive
 2R,1,4,20,10,xl,TRUE,heterozygous,6686007,24798525,true positive
-2R,1,4,0.5,11,xl,TRUE,homozygous,6686007,24798525,false negative
-2R,1,4,2,11,xl,TRUE,homozygous,6686007,24798525,false negative
-2R,1,4,5,11,xl,TRUE,homozygous,6686007,24798525,false negative
-2R,1,4,10,11,xl,TRUE,homozygous,6686007,24798525,false negative
-2R,1,4,20,11,xl,TRUE,homozygous,6686007,24798525,false negative
 3L,1,3,0.5,1,xl,TRUE,heterozygous,5332918,22935558,false negative
 3L,1,3,2,1,xl,TRUE,heterozygous,5332918,22935558,true positive
 3L,1,3,5,1,xl,TRUE,heterozygous,5332918,22935558,true positive
@@ -159,11 +149,6 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,position_start,position
 3L,1,3,5,10,xl,FALSE,homozygous,5332918,22935558,true negative
 3L,1,3,10,10,xl,FALSE,homozygous,5332918,22935558,true negative
 3L,1,3,20,10,xl,FALSE,homozygous,5332918,22935558,true negative
-3L,1,3,0.5,11,xl,TRUE,homozygous,5332918,22935558,false negative
-3L,1,3,2,11,xl,TRUE,homozygous,5332918,22935558,false negative
-3L,1,3,5,11,xl,TRUE,homozygous,5332918,22935558,false negative
-3L,1,3,10,11,xl,TRUE,homozygous,5332918,22935558,false negative
-3L,1,3,20,11,xl,TRUE,homozygous,5332918,22935558,false negative
 3R,1,2,0.5,1,xl,TRUE,homozygous,5316416,31441385,true positive
 3R,1,2,2,1,xl,TRUE,homozygous,5316416,31441385,true positive
 3R,1,2,5,1,xl,TRUE,homozygous,5316416,31441385,true positive
@@ -214,8 +199,3 @@ contig,inversion,id,depth,sample,size,simulated,zygosity,position_start,position
 3R,1,2,5,10,xl,TRUE,heterozygous,5316416,31441385,true positive
 3R,1,2,10,10,xl,TRUE,heterozygous,5316416,31441385,true positive
 3R,1,2,20,10,xl,TRUE,heterozygous,5316416,31441385,true positive
-3R,1,2,0.5,11,xl,TRUE,homozygous,5316416,31441385,false negative
-3R,1,2,2,11,xl,TRUE,homozygous,5316416,31441385,false negative
-3R,1,2,5,11,xl,TRUE,homozygous,5316416,31441385,false negative
-3R,1,2,10,11,xl,TRUE,homozygous,5316416,31441385,false negative
-3R,1,2,20,11,xl,TRUE,homozygous,5316416,31441385,false negative
