@@ -16,7 +16,7 @@ dmel.*
 RM*/
 RepBase*
 RepeatMasker
-
+.environments
 
 # book stuff
 _build/
